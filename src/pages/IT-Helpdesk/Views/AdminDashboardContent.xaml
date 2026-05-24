@@ -1,0 +1,416 @@
+<UserControl x:Class="IT_Helpdesk.Views.AdminDashboardContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <!-- Converters -->
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+        <!-- Priority color converters via styles -->
+        <!-- High = Red, Medium = Orange, Low = Green -->
+        <Style x:Key="PriorityHighStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <!-- Status color converters via styles -->
+        <!-- Pending = Gray, In Progress = Blue, Resolved = Green, Closed = Dark -->
+        <Style x:Key="StatusTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <!-- DataGrid style -->
+        <Style x:Key="RecentTicketsGridStyle" TargetType="DataGrid">
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#F0F0F0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="RowBackground" Value="White"/>
+            <Setter Property="AlternatingRowBackground" Value="#FAFAFA"/>
+            <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="RowHeight" Value="44"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+        </Style>
+
+        <Style x:Key="DataGridHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#F5F5F5"/>
+            <Setter Property="Foreground" Value="#555555"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Padding" Value="12,0"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        </Style>
+
+        <!-- Summary Card Style -->
+        <Style x:Key="SummaryCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Margin" Value="0,0,16,0"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#E0E0E0" Direction="270" ShadowDepth="2" BlurRadius="8" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Card Title Style -->
+        <Style x:Key="CardTitleStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="#666666"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Card Value Style -->
+        <Style x:Key="CardValueStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#1A1A2E"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Card Icon Style -->
+        <Style x:Key="CardIconStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <!-- Page Header -->
+            <Grid Margin="0,0,0,24">
+                <Button Content="Refresh" 
+                        HorizontalAlignment="Right"
+                        Padding="16,8"
+                        Background="#007ACC"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontWeight="Medium"
+                        Cursor="Hand"
+                        Command="{Binding RefreshCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}"
+                                                CornerRadius="4"
+                                                Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" 
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#005A9E"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+
+            <!-- Summary Cards -->
+            <Grid Margin="0,0,0,32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Total Tickets Card -->
+                <Border Grid.Column="0" Style="{StaticResource SummaryCardStyle}">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="📊" Style="{StaticResource CardIconStyle}"/>
+                        <TextBlock Text="Total Tickets" Style="{StaticResource CardTitleStyle}"/>
+                        <TextBlock Text="{Binding TotalTickets}" Style="{StaticResource CardValueStyle}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Resolved Tickets Card -->
+                <Border Grid.Column="1" Style="{StaticResource SummaryCardStyle}">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="✅" Style="{StaticResource CardIconStyle}"/>
+                        <TextBlock Text="Resolved" Style="{StaticResource CardTitleStyle}"/>
+                        <TextBlock Text="{Binding ResolvedTickets}" Style="{StaticResource CardValueStyle}"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Pending Tickets Card -->
+                <Border Grid.Column="2" Style="{StaticResource SummaryCardStyle}" Margin="0">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="⏳" Style="{StaticResource CardIconStyle}"/>
+                        <TextBlock Text="Pending" Style="{StaticResource CardTitleStyle}"/>
+                        <TextBlock Text="{Binding PendingTickets}" Style="{StaticResource CardValueStyle}"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Charts Section -->
+            <Grid Margin="0,0,0,32">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="16"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="16"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Category Distribution Pie Chart -->
+                <Border Grid.Column="0" 
+                        Background="White"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#E0E0E0" Direction="270" ShadowDepth="2" BlurRadius="8" Opacity="0.3"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="Tickets by Category" 
+                                   FontSize="16" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="#1A1A2E"
+                                   Margin="0,0,0,12"
+                                   HorizontalAlignment="Center"/>
+                        <lvc:PieChart Series="{Binding CategorySeries}"
+                                      Height="280"
+                                      LegendPosition="Bottom"
+                                      LegendTextSize="12"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Status Distribution Pie Chart -->
+                <Border Grid.Column="2" 
+                        Background="White"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#E0E0E0" Direction="270" ShadowDepth="2" BlurRadius="8" Opacity="0.3"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="Tickets by Status" 
+                                   FontSize="16" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="#1A1A2E"
+                                   Margin="0,0,0,12"
+                                   HorizontalAlignment="Center"/>
+                        <lvc:PieChart Series="{Binding StatusSeries}"
+                                      Height="280"
+                                      LegendPosition="Bottom"
+                                      LegendTextSize="12"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Priority Bar Chart -->
+                <Border Grid.Column="4" 
+                        Background="White"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#E0E0E0" Direction="270" ShadowDepth="2" BlurRadius="8" Opacity="0.3"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="Tickets by Priority" 
+                                   FontSize="16" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="#1A1A2E"
+                                   Margin="0,0,0,12"
+                                   HorizontalAlignment="Center"/>
+                        <lvc:CartesianChart Series="{Binding PrioritySeries}"
+                                            Height="280"
+                                            LegendPosition="Bottom"
+                                            LegendTextSize="12">
+                        </lvc:CartesianChart>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Loading Indicator -->
+            <Grid Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"
+                  Margin="0,32">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock Text="Loading dashboard data..." 
+                               FontSize="14" 
+                               Foreground="#666666" 
+                               VerticalAlignment="Center"
+                               Margin="0,0,8,0"/>
+                    <!-- Simple loading animation could be added here -->
+                </StackPanel>
+            </Grid>
+
+            <!-- Recent Tickets Section -->
+            <Grid Margin="0,16,0,0">
+                <Border Background="White"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20">
+                    <StackPanel>
+                        <TextBlock Text="Recent Tickets" 
+                                   FontSize="18" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="#1A1A2E"
+                                   Margin="0,0,0,16"/>
+
+                        <DataGrid ItemsSource="{Binding RecentTickets}"
+                                  Style="{StaticResource RecentTicketsGridStyle}"
+                                  ColumnHeaderStyle="{StaticResource DataGridHeaderStyle}">
+                            <DataGrid.Columns>
+
+                                <!-- ID Column -->
+                                <DataGridTextColumn Header="ID"
+                                                    Binding="{Binding TicketID}"
+                                                    Width="0.5*"
+                                                    MinWidth="50">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Padding" Value="12,0"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="Foreground" Value="#555555"/>
+                                            <Setter Property="FontWeight" Value="Medium"/>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+
+                                <!-- Title Column -->
+                                <DataGridTextColumn Header="Title"
+                                                    Binding="{Binding Title}"
+                                                    Width="3*"
+                                                    MinWidth="200">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Padding" Value="12,0"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="Foreground" Value="#1A1A2E"/>
+                                            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+
+                                <!-- Status Column (color-coded badge) -->
+                                <DataGridTemplateColumn Header="Status" Width="1.3*" MinWidth="120">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border CornerRadius="4"
+                                                    Padding="8,3"
+                                                    HorizontalAlignment="Left"
+                                                    VerticalAlignment="Center"
+                                                    Margin="8,0">
+                                                <Border.Style>
+                                                    <Style TargetType="Border">
+                                                        <Setter Property="Background" Value="#9E9E9E"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Pending">
+                                                                <Setter Property="Background" Value="#9E9E9E"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Status}" Value="In Progress">
+                                                                <Setter Property="Background" Value="#007ACC"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Resolved">
+                                                                <Setter Property="Background" Value="#28A745"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Closed">
+                                                                <Setter Property="Background" Value="#3D3D3D"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Border.Style>
+                                                <TextBlock Text="{Binding Status}"
+                                                           Foreground="White"
+                                                           FontSize="12"
+                                                           FontWeight="SemiBold"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                                <!-- Priority Column (color-coded badge) -->
+                                <DataGridTemplateColumn Header="Priority" Width="1*" MinWidth="100">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Border CornerRadius="4"
+                                                    Padding="8,3"
+                                                    HorizontalAlignment="Left"
+                                                    VerticalAlignment="Center"
+                                                    Margin="8,0">
+                                                <Border.Style>
+                                                    <Style TargetType="Border">
+                                                        <Setter Property="Background" Value="#9E9E9E"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Priority}" Value="High">
+                                                                <Setter Property="Background" Value="#DC3545"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Priority}" Value="Medium">
+                                                                <Setter Property="Background" Value="#FD7E14"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Priority}" Value="Low">
+                                                                <Setter Property="Background" Value="#28A745"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Border.Style>
+                                                <TextBlock Text="{Binding Priority}"
+                                                           Foreground="White"
+                                                           FontSize="12"
+                                                           FontWeight="SemiBold"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <!-- Empty state message -->
+                        <TextBlock Text="No tickets found."
+                                   FontSize="14"
+                                   Foreground="#AAAAAA"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,24">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RecentTickets.Count}" Value="0">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
+

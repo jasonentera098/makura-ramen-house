@@ -1,0 +1,15 @@
+<Window x:Class="IT_Helpdesk.Views.AdminTicketUpdateDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IT_Helpdesk.Views"
+        mc:Ignorable="d"
+        Title="Update Ticket" Height="600" Width="700"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="CanResize">
+    
+    <Grid>
+        <local:TicketUpdateContent x:Name="ticketUpdateContent" Loaded="ticketUpdateContent_Loaded" Margin="0,0,0,-351"/>
+    </Grid>
+</Window>

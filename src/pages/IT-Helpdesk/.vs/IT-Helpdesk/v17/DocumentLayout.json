@@ -1,0 +1,669 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\ticketupdatecontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\ticketupdatecontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\technicianassignedticketscontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\technicianassignedticketscontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\techniciandashboardcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\techniciandashboardcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\technicianreportcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\technicianreportcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\ticketsubmitcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\ticketsubmitcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\ticketdetailsdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\ticketdetailsdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\employeereportcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\employeereportcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\employeemyticketscontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\employeemyticketscontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\employeedashboardcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\employeedashboardcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\changepasswordcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\changepasswordcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\assignticketdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\assignticketdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\adminusermanagementcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\adminusermanagementcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\adminticketupdatedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\adminticketupdatedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\adminticketmanagementcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\adminticketmanagementcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\adminreportcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\adminreportcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\admindashboardcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\admindashboardcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\ticketupdateselectioncontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\ticketupdateselectioncontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\techniciandashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:techniciandashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\employeedashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:employeedashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\employeedashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:employeedashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\deleteconfirmation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:deleteconfirmation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\adduser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:adduser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\assignticketdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\assignticketdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\adminticketupdatedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\adminticketupdatedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\viewmodels\\adminreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:viewmodels\\adminreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\viewmodels\\adminusermanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:viewmodels\\adminusermanagementviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\viewmodels\\techniciandashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:viewmodels\\techniciandashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\viewmodels\\technicianassignedticketsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:viewmodels\\technicianassignedticketsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\viewmodels\\admindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:viewmodels\\admindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\adminreportcontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\adminreportcontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\deleteconfirmation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:deleteconfirmation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\ticketsubmitpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:ticketsubmitpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\views\\adminusermanagementcontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:views\\adminusermanagementcontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|c:\\users\\jason\\downloads\\it-helpdesk\\reportss.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44E8617A-60C2-4D3A-82D8-ECB7D6BBC0BA}|IT-Helpdesk.csproj|solutionrelative:reportss.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Window1.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Window1.xaml",
+              "RelativeDocumentMoniker": "Window1.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Window1.xaml",
+              "RelativeToolTip": "Window1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-14T00:06:15.45Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TechnicianDashboardContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TechnicianDashboardContent.xaml",
+              "RelativeDocumentMoniker": "Views\\TechnicianDashboardContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TechnicianDashboardContent.xaml",
+              "RelativeToolTip": "Views\\TechnicianDashboardContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T06:45:15.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TechnicianReportContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TechnicianReportContent.xaml",
+              "RelativeDocumentMoniker": "Views\\TechnicianReportContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TechnicianReportContent.xaml",
+              "RelativeToolTip": "Views\\TechnicianReportContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-05T06:40:42.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TechnicianAssignedTicketsContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TechnicianAssignedTicketsContent.xaml",
+              "RelativeDocumentMoniker": "Views\\TechnicianAssignedTicketsContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TechnicianAssignedTicketsContent.xaml",
+              "RelativeToolTip": "Views\\TechnicianAssignedTicketsContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-05T06:40:15.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TicketUpdateContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketUpdateContent.xaml",
+              "RelativeDocumentMoniker": "Views\\TicketUpdateContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketUpdateContent.xaml",
+              "RelativeToolTip": "Views\\TicketUpdateContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T13:39:19.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TicketSubmitContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketSubmitContent.xaml",
+              "RelativeDocumentMoniker": "Views\\TicketSubmitContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketSubmitContent.xaml",
+              "RelativeToolTip": "Views\\TicketSubmitContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T05:41:10.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TicketDetailsDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketDetailsDialog.xaml",
+              "RelativeDocumentMoniker": "Views\\TicketDetailsDialog.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketDetailsDialog.xaml",
+              "RelativeToolTip": "Views\\TicketDetailsDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T09:43:13.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeReportContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\EmployeeReportContent.xaml",
+              "RelativeDocumentMoniker": "Views\\EmployeeReportContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\EmployeeReportContent.xaml",
+              "RelativeToolTip": "Views\\EmployeeReportContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T08:12:15.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeMyTicketsContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\EmployeeMyTicketsContent.xaml",
+              "RelativeDocumentMoniker": "Views\\EmployeeMyTicketsContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\EmployeeMyTicketsContent.xaml",
+              "RelativeToolTip": "Views\\EmployeeMyTicketsContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T08:12:08.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeDashboardContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\EmployeeDashboardContent.xaml",
+              "RelativeDocumentMoniker": "Views\\EmployeeDashboardContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\EmployeeDashboardContent.xaml",
+              "RelativeToolTip": "Views\\EmployeeDashboardContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T06:36:48.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChangePasswordContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\ChangePasswordContent.xaml",
+              "RelativeDocumentMoniker": "Views\\ChangePasswordContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\ChangePasswordContent.xaml",
+              "RelativeToolTip": "Views\\ChangePasswordContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T08:11:57.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssignTicketDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AssignTicketDialog.xaml",
+              "RelativeDocumentMoniker": "Views\\AssignTicketDialog.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AssignTicketDialog.xaml",
+              "RelativeToolTip": "Views\\AssignTicketDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-26T16:33:12.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminUserManagementContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminUserManagementContent.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminUserManagementContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminUserManagementContent.xaml",
+              "RelativeToolTip": "Views\\AdminUserManagementContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-26T16:33:07.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminTicketUpdateDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminTicketUpdateDialog.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminTicketUpdateDialog.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminTicketUpdateDialog.xaml",
+              "RelativeToolTip": "Views\\AdminTicketUpdateDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T07:50:35.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminTicketManagementContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminTicketManagementContent.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminTicketManagementContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminTicketManagementContent.xaml",
+              "RelativeToolTip": "Views\\AdminTicketManagementContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-26T16:12:55.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdminReportContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminReportContent.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminReportContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminReportContent.xaml",
+              "RelativeToolTip": "Views\\AdminReportContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-30T05:45:35.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminDashboardContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminDashboardContent.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminDashboardContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminDashboardContent.xaml",
+              "RelativeToolTip": "Views\\AdminDashboardContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T06:35:22.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TicketUpdateSelectionContent.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketUpdateSelectionContent.xaml",
+              "RelativeDocumentMoniker": "Views\\TicketUpdateSelectionContent.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\TicketUpdateSelectionContent.xaml",
+              "RelativeToolTip": "Views\\TicketUpdateSelectionContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T09:43:28.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TechnicianDashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\TechnicianDashboard.xaml",
+              "RelativeDocumentMoniker": "TechnicianDashboard.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\TechnicianDashboard.xaml",
+              "RelativeToolTip": "TechnicianDashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T15:08:40.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EmployeeDashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\EmployeeDashboard.xaml",
+              "RelativeDocumentMoniker": "EmployeeDashboard.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\EmployeeDashboard.xaml",
+              "RelativeToolTip": "EmployeeDashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-14T02:46:18.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-13T15:31:23.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EmployeeDashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\EmployeeDashboard.xaml.cs",
+              "RelativeDocumentMoniker": "EmployeeDashboard.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\EmployeeDashboard.xaml.cs",
+              "RelativeToolTip": "EmployeeDashboard.xaml.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAswCUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T04:51:31.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DeleteConfirmation.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\DeleteConfirmation.xaml",
+              "RelativeDocumentMoniker": "DeleteConfirmation.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\DeleteConfirmation.xaml",
+              "RelativeToolTip": "DeleteConfirmation.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T08:47:04.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T09:44:20.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AddUser.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\AddUser.xaml",
+              "RelativeDocumentMoniker": "AddUser.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\AddUser.xaml",
+              "RelativeToolTip": "AddUser.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T09:43:35.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AssignTicketDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AssignTicketDialog.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\AssignTicketDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AssignTicketDialog.xaml.cs",
+              "RelativeToolTip": "Views\\AssignTicketDialog.xaml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAWwCsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:16:23.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAMMUAAAAAAAAAAAQwM0UAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-29T17:39:12.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AdminTicketUpdateDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminTicketUpdateDialog.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\AdminTicketUpdateDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminTicketUpdateDialog.xaml.cs",
+              "RelativeToolTip": "Views\\AdminTicketUpdateDialog.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAASwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T07:50:51.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AdminReportViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\AdminReportViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdminReportViewModel.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\AdminReportViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdminReportViewModel.cs",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAgwD4EAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:38:58.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Window1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Window1.xaml.cs",
+              "RelativeDocumentMoniker": "Window1.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Window1.xaml.cs",
+              "RelativeToolTip": "Window1.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T23:40:01.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AdminUserManagementViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\AdminUserManagementViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdminUserManagementViewModel.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\AdminUserManagementViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdminUserManagementViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T17:06:18.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "TechnicianDashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\TechnicianDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\TechnicianDashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\TechnicianDashboardViewModel.cs",
+              "RelativeToolTip": "ViewModels\\TechnicianDashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:39:09.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TechnicianAssignedTicketsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\TechnicianAssignedTicketsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\TechnicianAssignedTicketsViewModel.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\TechnicianAssignedTicketsViewModel.cs",
+              "RelativeToolTip": "ViewModels\\TechnicianAssignedTicketsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:39:06.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AdminDashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\AdminDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdminDashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\ViewModels\\AdminDashboardViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdminDashboardViewModel.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:38:50.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AdminReportContent.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminReportContent.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\AdminReportContent.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminReportContent.xaml.cs",
+              "RelativeToolTip": "Views\\AdminReportContent.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T05:48:20.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DeleteConfirmation.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\DeleteConfirmation.xaml.cs",
+              "RelativeDocumentMoniker": "DeleteConfirmation.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\DeleteConfirmation.xaml.cs",
+              "RelativeToolTip": "DeleteConfirmation.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T06:35:02.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TicketSubmitPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\TicketSubmitPage.xaml",
+              "RelativeDocumentMoniker": "TicketSubmitPage.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\TicketSubmitPage.xaml",
+              "RelativeToolTip": "TicketSubmitPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T05:31:53.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AdminUserManagementContent.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminUserManagementContent.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\AdminUserManagementContent.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Views\\AdminUserManagementContent.xaml.cs",
+              "RelativeToolTip": "Views\\AdminUserManagementContent.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T17:15:32.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Reportss.xaml",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Reportss.xaml",
+              "RelativeDocumentMoniker": "Reportss.xaml",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\Reportss.xaml",
+              "RelativeToolTip": "Reportss.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T08:32:51.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\jason\\Downloads\\IT-Helpdesk\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T15:31:20.953Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

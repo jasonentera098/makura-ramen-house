@@ -1,0 +1,75 @@
+/* Mobile Responsive Utilities for devices < 770px */
+
+/* Ensure all images are responsive */
+@media screen and (max-width: 770px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Bowl cards responsive */
+  .bowl-card {
+    width: 90% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    min-height: 280px !important;
+  }
+
+  /* Promo images responsive */
+  .promo-image {
+    width: 90% !important;
+    max-width: 300px !important;
+    height: 220px !important;
+  }
+
+  /* Barkada feast images responsive */
+  .feast-image {
+    width: 90% !important;
+    max-width: 300px !important;
+    height: 240px !important;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 20px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Hero section adjustments */
+  .hero-title {
+    font-size: 18px !important;
+  }
+
+  .hero-description {
+    font-size: 12px !important;
+  }
+
+  /* Button adjustments */
+  button {
+    font-size: 14px !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Card text */
+  .card-text {
+    font-size: 13px !important;
+  }
+
+  /* Flex containers to column on mobile */
+  .flex-row-mobile {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Gap adjustments */
+  .gap-mobile {
+    gap: 1.5rem !important;
+  }
+
+  /* Padding adjustments */
+  .px-mobile {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}

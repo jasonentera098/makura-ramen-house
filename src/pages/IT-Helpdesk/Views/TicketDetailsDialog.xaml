@@ -1,0 +1,389 @@
+<Window x:Class="IT_Helpdesk.Views.TicketDetailsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Ticket Details" Height="760" Width="850" 
+        ResizeMode="CanResize" WindowStartupLocation="CenterOwner"
+        FontFamily="Roboto"
+        Background="#F5F7FA">
+
+    <Window.Resources>
+        <!-- Section Header Style -->
+        <Style x:Key="SectionHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#1A1A2E"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+        </Style>
+
+        <!-- Label Style -->
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="#666666"/>
+            <Setter Property="Margin" Value="0,0,0,4"/>
+        </Style>
+
+        <!-- Value Style -->
+        <Style x:Key="ValueStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="#1A1A2E"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,0,0,16"/>
+        </Style>
+
+        <!-- Button Style -->
+        <Style x:Key="DialogButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="Padding" Value="20,0"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="4"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.85"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Border Background="White"
+                BorderBrush="#E0E0E0"
+                BorderThickness="1"
+                CornerRadius="0"
+                Margin="0"
+                Padding="0">
+            <Border.Effect>
+                <DropShadowEffect Color="#000000" Direction="270" ShadowDepth="1" BlurRadius="8" Opacity="0.06"/>
+            </Border.Effect>
+            
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0">
+            <StackPanel>
+
+                <!-- Header Section with Icon -->
+                <Border Background="#F8F9FA" 
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="0,0,0,1"
+                        Padding="32,24">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <Border Background="#E3F2FD"
+                                    Width="48"
+                                    Height="48"
+                                    CornerRadius="8"
+                                    Margin="0,0,16,0">
+                                <TextBlock Text="🎫"
+                                           FontSize="24"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+                            </Border>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="{Binding TicketTitle}"
+                                           FontSize="22"
+                                           FontWeight="Bold"
+                                           Foreground="#1A1A2E"
+                                           TextWrapping="Wrap"/>
+                                <TextBlock FontSize="13" Foreground="#666666" Margin="0,4,0,0">
+                                    <Run Text="Ticket #"/>
+                                    <Run Text="{Binding TicketID}" FontWeight="SemiBold"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Status and Priority Badges -->
+                        <StackPanel Orientation="Horizontal">
+                            <!-- Status Badge -->
+                            <Border CornerRadius="4" Padding="12,6" Margin="0,0,12,0">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="#9E9E9E"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Status}" Value="Pending">
+                                                <Setter Property="Background" Value="#9E9E9E"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Status}" Value="In Progress">
+                                                <Setter Property="Background" Value="#007ACC"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Status}" Value="Resolved">
+                                                <Setter Property="Background" Value="#28A745"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Status}" Value="Closed">
+                                                <Setter Property="Background" Value="#3D3D3D"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock Text="{Binding Status}"
+                                           Foreground="White"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"/>
+                            </Border>
+
+                            <!-- Priority Badge -->
+                            <Border CornerRadius="4" Padding="12,6">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="#9E9E9E"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Priority}" Value="High">
+                                                <Setter Property="Background" Value="#DC3545"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Priority}" Value="Medium">
+                                                <Setter Property="Background" Value="#FD7E14"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Priority}" Value="Low">
+                                                <Setter Property="Background" Value="#28A745"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <TextBlock Foreground="White" FontSize="13" FontWeight="SemiBold">
+                                    <Run Text="{Binding Priority}"/>
+                                    <Run Text=" Priority"/>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Content Area -->
+                <StackPanel Margin="32,24,32,32">
+
+                    <!-- Main Content Card -->
+                <Border Background="White"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="24"
+                        Margin="0,0,0,16">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#E0E0E0" Direction="270" ShadowDepth="1" BlurRadius="6" Opacity="0.2"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <!-- Description Section -->
+                        <TextBlock Text="Description" Style="{StaticResource SectionHeaderStyle}"/>
+                        <TextBlock Text="{Binding Description}" 
+                                   Style="{StaticResource ValueStyle}"
+                                   Margin="0,0,0,24"/>
+
+                        <!-- Details Grid -->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Category -->
+                            <StackPanel Grid.Row="0" Grid.Column="0">
+                                <TextBlock Text="Category" Style="{StaticResource LabelStyle}"/>
+                                <TextBlock Text="{Binding Category}" Style="{StaticResource ValueStyle}"/>
+                            </StackPanel>
+
+                            <!-- Department -->
+                            <StackPanel Grid.Row="0" Grid.Column="1">
+                                <TextBlock Text="Department" Style="{StaticResource LabelStyle}"/>
+                                <TextBlock Text="{Binding DepartmentName}" Style="{StaticResource ValueStyle}"/>
+                            </StackPanel>
+
+                            <!-- Submitted By -->
+                            <StackPanel Grid.Row="1" Grid.Column="0">
+                                <TextBlock Text="Submitted By" Style="{StaticResource LabelStyle}"/>
+                                <TextBlock Text="{Binding SubmittedByName}" Style="{StaticResource ValueStyle}"/>
+                            </StackPanel>
+
+                            <!-- Assigned To -->
+                            <StackPanel Grid.Row="1" Grid.Column="1">
+                                <TextBlock Text="Assigned To" Style="{StaticResource LabelStyle}"/>
+                                <TextBlock Text="{Binding AssignedToName}" Style="{StaticResource ValueStyle}"/>
+                            </StackPanel>
+
+                            <!-- Date Submitted -->
+                            <StackPanel Grid.Row="2" Grid.Column="0">
+                                <TextBlock Text="Date Submitted" Style="{StaticResource LabelStyle}"/>
+                                <TextBlock Text="{Binding DateSubmitted, StringFormat='MMM dd, yyyy hh:mm tt'}" 
+                                           Style="{StaticResource ValueStyle}"/>
+                            </StackPanel>
+
+                            <!-- Date Resolved -->
+                            <StackPanel Grid.Row="2" Grid.Column="1">
+                                <TextBlock Text="Date Resolved" Style="{StaticResource LabelStyle}"/>
+                                <TextBlock Text="{Binding DateResolvedDisplay}" Style="{StaticResource ValueStyle}"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <!-- Updates Section -->
+                <Border Background="White"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="24"
+                        Margin="0,0,0,16">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#E0E0E0" Direction="270" ShadowDepth="1" BlurRadius="6" Opacity="0.2"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Text="Ticket Updates" Style="{StaticResource SectionHeaderStyle}"/>
+
+                        <!-- Updates List -->
+                        <ItemsControl ItemsSource="{Binding Updates}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#F8F9FA"
+                                            BorderBrush="#E0E0E0"
+                                            BorderThickness="1"
+                                            CornerRadius="6"
+                                            Padding="16"
+                                            Margin="0,0,0,12">
+                                        <StackPanel>
+                                            <Grid Margin="0,0,0,8">
+                                                <TextBlock FontSize="13" FontWeight="SemiBold" Foreground="#1A1A2E">
+                                                    <Run Text="{Binding UpdatedByName}"/>
+                                                </TextBlock>
+                                                <TextBlock Text="{Binding UpdateDate, StringFormat='MMM dd, yyyy hh:mm tt'}"
+                                                           FontSize="12"
+                                                           Foreground="#666666"
+                                                           HorizontalAlignment="Right"/>
+                                            </Grid>
+                                            <TextBlock Text="{Binding StatusChange}"
+                                                       FontSize="12"
+                                                       Foreground="#007ACC"
+                                                       FontWeight="Medium"
+                                                       Margin="0,0,0,4"
+                                                       Visibility="{Binding HasStatusChange}"/>
+                                            <TextBlock Text="{Binding Remarks}"
+                                                       FontSize="13"
+                                                       Foreground="#555555"
+                                                       TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <!-- No Updates Message -->
+                        <TextBlock Text="No updates yet."
+                                   FontSize="13"
+                                   Foreground="#AAAAAA"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,12">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Updates.Count}" Value="0">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <!-- Attachments Section -->
+                <Border Background="White"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="24"
+                        Margin="0,0,0,24">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#E0E0E0" Direction="270" ShadowDepth="1" BlurRadius="6" Opacity="0.2"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Text="Attachments" Style="{StaticResource SectionHeaderStyle}"/>
+
+                        <!-- Attachments List -->
+                        <ItemsControl ItemsSource="{Binding Attachments}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#F8F9FA"
+                                            BorderBrush="#E0E0E0"
+                                            BorderThickness="1"
+                                            CornerRadius="6"
+                                            Padding="12"
+                                            Margin="0,0,0,8">
+                                        <Grid>
+                                            <TextBlock Text="{Binding FileName}"
+                                                       FontSize="13"
+                                                       Foreground="#1A1A2E"
+                                                       VerticalAlignment="Center"/>
+                                            <TextBlock Text="{Binding UploadedAt, StringFormat='MMM dd, yyyy'}"
+                                                       FontSize="12"
+                                                       Foreground="#666666"
+                                                       HorizontalAlignment="Right"
+                                                       VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <!-- No Attachments Message -->
+                        <TextBlock Text="No attachments."
+                                   FontSize="13"
+                                   Foreground="#AAAAAA"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,12">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Attachments.Count}" Value="0">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                    <!-- Divider before button -->
+                    <Rectangle Height="1" Fill="#E0E0E0" Margin="0,0,0,20"/>
+
+                    <!-- Close Button -->
+                    <Button HorizontalAlignment="Right"
+                            Background="#6C757D"
+                            Foreground="White"
+                            Width="110"
+                            Style="{StaticResource DialogButtonStyle}"
+                            Click="btnClose_Click">
+                        <TextBlock Text="Close" VerticalAlignment="Center"/>
+                    </Button>
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

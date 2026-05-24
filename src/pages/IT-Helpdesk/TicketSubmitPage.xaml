@@ -1,0 +1,91 @@
+<Window x:Class="IT_Helpdesk.TicketSubmitPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IT_Helpdesk"
+        mc:Ignorable="d"
+        Title="TicketSubmitPage" Height="720" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFD1D1D1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="369*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="669" Stroke="Black" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5" Margin="24,25,0,0" Grid.ColumnSpan="2" RadiusX="20" RadiusY="15" StrokeThickness="0" StrokeEndLineCap="Round">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2370A3" Offset="0"/>
+                    <GradientStop Color="White" Offset="0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image Grid.Column="1" HorizontalAlignment="Left"  Height="76" Margin="3,65,0,0" VerticalAlignment="Top" Width="76" Source="/Images/logo.png" Stretch="Fill"/>
+        <Button Content="Dashboard" HorizontalAlignment="Left" Margin="47,187,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="156" Height="36" Click="Button_Click" BorderBrush="#FFB4B4B4" FontFamily="Roboto" Background="White" BorderThickness="0.5,0.5,0.5,0.5" FontSize="11">
+            <Button.Style>
+                <Style/>
+            </Button.Style>
+        </Button>
+        <Button Content="Assigned Tickets" HorizontalAlignment="Left" Margin="47,254,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="156" Height="36" Click="Button_Click" BorderBrush="#FFB4B4B4" FontFamily="Roboto" Background="{x:Null}" BorderThickness="0.5,0.5,0.5,0.5" FontSize="11"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="65,264,0,0" VerticalAlignment="Top" Width="15" Source="/Images/ticket.png" RenderTransformOrigin="2.808,1.772"/>
+        <Button Content="Reports" HorizontalAlignment="Left" Margin="47,391,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="156" Height="36" Click="Button_Click" BorderBrush="#FFB4B4B4" FontFamily="Roboto" Background="White" BorderThickness="0.5,0.5,0.5,0.5" FontSize="11">
+            <Button.Style>
+                <Style/>
+            </Button.Style>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="24" Margin="65,198,0,0" VerticalAlignment="Top" Width="15" Source="/Images/dashboard.png" RenderTransformOrigin="2.808,1.772" OpacityMask="Black"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="65,401,0,0" VerticalAlignment="Top" Width="15" Source="/Images/report.png" RenderTransformOrigin="2.808,1.772"/>
+        <Button Content="Log Out" HorizontalAlignment="Left" Margin="47,455,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="156" Height="36" Click="Button_Click" BorderBrush="#FFB4B4B4" FontFamily="Roboto" Background="White" BorderThickness="0.5,0.5,0.5,0.5" FontSize="11">
+            <Button.Style>
+                <Style/>
+            </Button.Style>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="24" Margin="65,465,0,0" VerticalAlignment="Top" Width="15" Source="/Images/logout.png" RenderTransformOrigin="2.808,1.772"/>
+        <Button Content="Update Tickets" HorizontalAlignment="Left" Margin="47,327,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="156" Height="36" Click="Button_Click" BorderBrush="#FFB4B4B4" FontFamily="Roboto" Background="{x:Null}" BorderThickness="0.5,0.5,0.5,0.5" FontSize="11"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="65,337,0,0" VerticalAlignment="Top" Width="15" Source="/Images/ticket.png" RenderTransformOrigin="2.808,1.772"/>
+        <Label Grid.Column="1" Content="Update Ticket" HorizontalAlignment="Left" Margin="220,38,0,0" VerticalAlignment="Top" FontSize="20" Width="237"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="188,38,0,0" VerticalAlignment="Top" Width="25" Source="/Images/ticket.png" RenderTransformOrigin="2.808,1.772" Stretch="Fill"/>
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="441" Margin="316,157,0,0" Stroke="Black" VerticalAlignment="Top" Width="494" RadiusX="10" RadiusY="10" RenderTransformOrigin="0.32,0.472" Fill="White" StrokeThickness="0.5">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="557,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="28"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="557,348,0,0" VerticalAlignment="Top" Width="206" Height="28"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="557,411,0,0" VerticalAlignment="Top" Width="206" Height="32"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="557,465,0,0" VerticalAlignment="Top" Width="206" Height="36" Click="Button_Click" BorderBrush="#FFB4B4B4" FontFamily="Roboto" Background="#FF0AA8E8" BorderThickness="0.5,0.5,0.5,0.5" FontSize="14" Grid.Column="1" Foreground="White" RenderTransformOrigin="0.495,0.623" OpacityMask="White">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Style>
+                <Style/>
+            </Button.Style>
+        </Button>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="395,527,0,0" VerticalAlignment="Top" Width="368" Height="36" Click="Button_Click" BorderBrush="#FFB4B4B4" FontFamily="Roboto" Background="#FF10A358" BorderThickness="0.5,0.5,0.5,0.5" FontSize="14" Grid.Column="1" Foreground="White" RenderTransformOrigin="0.495,0.623" OpacityMask="White">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Style>
+                <Style/>
+            </Button.Style>
+        </Button>
+        <Label Grid.Column="1" Content="Title:" HorizontalAlignment="Left" Margin="415,224,0,0" VerticalAlignment="Top" FontFamily="Roboto" FontSize="13"/>
+        <Label Grid.Column="1" Content="Description:" HorizontalAlignment="Left" Margin="407,290,0,0" VerticalAlignment="Top" FontFamily="Roboto" FontSize="13"/>
+        <Label Grid.Column="1" Content="Status:" HorizontalAlignment="Left" Margin="407,350,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.403,0.279" FontFamily="Roboto" FontSize="13"/>
+        <Label Grid.Column="1" Content="Remarks:" HorizontalAlignment="Left" Margin="407,417,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.592,2.559" FontFamily="Roboto" FontSize="13"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="557,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="28"/>
+        <Label Grid.Column="1" Content="Attachment:" HorizontalAlignment="Left" Margin="401,475,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.592,2.559" FontFamily="Roboto" FontSize="13"/>
+
+    </Grid>
+</Window>
+

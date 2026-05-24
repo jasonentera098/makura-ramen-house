@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>IT_Helpdesk</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <!-- <StartupObject>IT_Helpdesk.TestDatabaseConnection</StartupObject> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc2" />
+    <PackageReference Include="QuestPDF" Version="2024.3.0" />
+    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\dashboard.png" />
+    <None Remove="Images\loading.png" />
+    <None Remove="Images\logout.png" />
+    <None Remove="Images\report.png" />
+    <None Remove="Images\resolved.png" />
+    <None Remove="Images\ticket.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\user.png" />
+    <None Remove="Images\changepassword.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Attachments\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\dashboard.png" />
+    <Resource Include="Images\loading.png" />
+    <Resource Include="Images\logout.png" />
+    <Resource Include="Images\report.png" />
+    <Resource Include="Images\resolved.png" />
+    <Resource Include="Images\ticket.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\user.png" />
+    <Resource Include="Images\changepassword.png" />
+  </ItemGroup>
+
+</Project>

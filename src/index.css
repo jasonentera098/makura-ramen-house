@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+@import './responsive-mobile.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile Responsive Utilities */
+@media screen and (max-width: 770px) {
+  .mobile-responsive-card {
+    width: 90% !important;
+    max-width: 280px !important;
+  }
+  
+  .mobile-responsive-image {
+    width: 90% !important;
+    max-width: 300px !important;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-poppins;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #a52a2a, #808080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-shadow-golden {
+    text-shadow: 2px 2px 4px rgba(242, 224, 116, 0.3);
+  }
+
+  /* Custom Scrollbar Styles */
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .scrollbar-track-golden\/10::-webkit-scrollbar-track {
+    background: rgba(242, 224, 116, 0.1);
+    border-radius: 10px;
+  }
+
+  .scrollbar-thumb-golden::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f2e074, #635c31);
+    border-radius: 10px;
+  }
+
+  .scrollbar-thumb-golden::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 224, 116, 0.8);
+  }
+
+  .scrollbar-thumb-rounded-\[10px\]::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+}

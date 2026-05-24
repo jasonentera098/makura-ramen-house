@@ -1,0 +1,239 @@
+<Window x:Class="IT_Helpdesk.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IT_Helpdesk"
+        xmlns:views="clr-namespace:IT_Helpdesk.Views"
+        mc:Ignorable="d"
+        Title="IT Helpdesk - Admin Dashboard"
+        MinWidth="1100" MinHeight="650"
+        Width="1100" Height="650"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize"
+        FontFamily="Roboto" WindowState="Maximized">
+
+    <Window.Resources>
+        <!-- Sidebar nav button style -->
+        <Style x:Key="NavButtonStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#666666"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="GroupName" Value="NavGroup"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="20,0,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="0"
+                                CornerRadius="8"
+                                Margin="8,2">
+                            <Grid>
+                                <!-- Active indicator bar on left -->
+                                <Rectangle x:Name="activeBar"
+                                           Width="4"
+                                           HorizontalAlignment="Left"
+                                           Fill="#00D399"
+                                           Visibility="Collapsed"
+                                           RadiusX="2"
+                                           RadiusY="2"/>
+                                <ContentPresenter Margin="{TemplateBinding Padding}"
+                                                  VerticalAlignment="Center"
+                                                  HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E6F9F4"/>
+                                <Setter Property="Foreground" Value="#00D399"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#00D399"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter TargetName="activeBar" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Log Out button style (plain Button, not RadioButton) -->
+        <Style x:Key="LogoutButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#666666"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="20,0,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="0"
+                                CornerRadius="8"
+                                Margin="8,2">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Left"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FFE6E6"/>
+                                <Setter Property="Foreground" Value="#DC3545"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FFCCCC"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <!-- Sidebar -->
+            <ColumnDefinition Width="200"/>
+            <!-- Main content -->
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ===== LEFT SIDEBAR ===== -->
+        <DockPanel Grid.Column="0" Background="White" LastChildFill="True">
+
+            <!-- App name / logo area at top -->
+            <StackPanel DockPanel.Dock="Top" Orientation="Vertical"
+                        Background="White"
+                        Height="80"
+                        VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="0,20,0,0">
+                    <Image Source="/Images/logo.png" 
+                           Width="32" 
+                           Height="32" 
+                           Margin="0,0,12,0"
+                           VerticalAlignment="Center"/>
+                    <TextBlock Text="IT Helpdesk"
+                               Foreground="#1A1A2E"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Separator under logo -->
+            <Rectangle DockPanel.Dock="Top" Height="1" Fill="#E8E8E8" Margin="16,0"/>
+
+            <!-- Log Out button pinned to bottom -->
+            <StackPanel DockPanel.Dock="Bottom">
+                <!-- Separator above logout -->
+                <Rectangle Height="1" Fill="#E8E8E8" Margin="16,0,16,0"/>
+                <Button x:Name="btnLogOut"
+                        Command="{Binding LogoutCommand}"
+                        Style="{StaticResource LogoutButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/logout.png" Width="18" Height="18" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Log Out" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <!-- Nav items fill remaining space -->
+            <StackPanel Margin="0,12,0,0">
+                <RadioButton x:Name="btnNavDashboard"
+                             IsChecked="True"
+                             Style="{StaticResource NavButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/dashboard.png" Width="18" Height="18" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Dashboard" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton x:Name="btnNavTickets"
+                             Style="{StaticResource NavButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/ticket.png" Width="18" Height="18" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Tickets" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton x:Name="btnNavUsers"
+                             Style="{StaticResource NavButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/user.png" Width="18" Height="18" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Users" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton x:Name="btnNavReports"
+                             Style="{StaticResource NavButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/report.png" Width="18" Height="18" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Reports" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton x:Name="btnNavChangePassword"
+                             Style="{StaticResource NavButtonStyle}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/changepassword.png" Width="18" Height="18" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Change Password" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </RadioButton>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- ===== MAIN CONTENT AREA ===== -->
+        <Grid Grid.Column="1" Background="#FF92C3AC">
+            <Grid.RowDefinitions>
+                <!-- Header bar -->
+                <RowDefinition Height="60"/>
+                <!-- Content placeholder -->
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header bar -->
+            <Border Grid.Row="0"
+                    Background="White"
+                    BorderBrush="#E0E0E0"
+                    BorderThickness="0,0,0,1">
+                <Grid Margin="24,0">
+                    <TextBlock x:Name="txtPageTitle"
+                               Text="Admin Dashboard"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Foreground="#1A1A2E"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"/>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+                        <TextBlock x:Name="txtWelcome"
+                                   Text="Welcome, Admin"
+                                   FontSize="13"
+                                   Foreground="#555555"
+                                   VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Main content area - swapped by sidebar navigation in code-behind -->
+            <ContentControl x:Name="MainContentArea"
+                            Grid.Row="1"
+                            Margin="24"/>
+        </Grid>
+    </Grid>
+</Window>
+

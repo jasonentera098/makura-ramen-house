@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@500;700;800&display=swap');
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* Common Style Variables */
+
+  /* Color */
+  --color-black: #000;
+  --color-darkslategray: #333;
+  --color-firebrick: #ce100b;
+  --color-gainsboro: #d9d9d9;
+  --color-gray: #101010;
+  --color-sienna: rgba(92, 35, 35, 0.9);
+  --color-snow: #fffafa;
+  --color-white: #fff;
+
+  /* Gap */
+  --gap-20: 20px;
+  --gap-26: 26px;
+  --gap-32: 32px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-10: 10px;
+  --padding-16: 16px;
+  --padding-20: 20px;
+  --padding-32: 32px;
+
+  /* BorderRadius */
+  --br-15: 15px;
+  --br-20: 20px;
+  --br-30: 30px;
+  --br-34: 34px;
+  --br-70: 70px;
+
+  /* Font */
+  --font-montserrat: "Montserrat", Arial, Helvetica, sans-serif;
+  --font-poppins: "Poppins", Arial, Helvetica, sans-serif;
+
+  /* FontSize */
+  --fs-16: 16px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-25: 25px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+  --fs-40: 40px;
+
+  /* Shadows */
+  --text-shadow-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* Gradients */
+  --gradient-1: linear-gradient(180deg, #f2e074, #635c31);
+  --gradient-2: linear-gradient(90deg, var(--color-firebrick), #321817);
+
+  /* WidthHeights */
+  --height-368_2: 368.2px;
+  --width-287_4: 287.4px;
+
+  --left-0: 0px;
+}
+
+
+

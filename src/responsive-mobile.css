@@ -1,0 +1,375 @@
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   For devices < 640px (iPhone 17: 402x874)
+   ============================================ */
+
+/* These styles only apply on small devices and don't affect desktop */
+
+/* ============================================
+   HEADER RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  /* Header adjustments */
+  .header {
+    min-height: 60px !important;
+    padding: 10px 20px !important;
+  }
+
+  /* Logo size */
+  .frame-child {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Brand text */
+  .ramen-house span {
+    font-size: 14px !important;
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    width: 200px !important;
+    padding: 24px !important;
+    gap: 24px !important;
+    top: 60px !important;
+    height: calc(100vh - 60px) !important;
+  }
+
+  .mobile-menu-item {
+    font-size: 16px !important;
+    padding: 8px 0 !important;
+  }
+
+  .mobile-login-btn {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    margin-top: 12px !important;
+  }
+}
+
+/* ============================================
+   FOOTER RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .footer {
+    padding: 16px !important;
+  }
+
+  .frame-parent3 {
+    gap: 16px !important;
+  }
+
+  /* Footer headers */
+  .business-info,
+  .business-hours,
+  .follow-us-on {
+    font-size: 14px !important;
+  }
+
+  /* Footer content text */
+  .makura-ramen-house,
+  .mon-fri,
+  .makura-ramen-house2 {
+    font-size: 12px !important;
+  }
+
+  /* Facebook icon */
+  .image-5-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .makura-ramen-house-parent {
+    gap: 6px !important;
+  }
+}
+
+/* ============================================
+   HOME PAGE RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  /* Hide hero section on mobile */
+  .hero-section-desktop {
+    display: none !important;
+  }
+
+  /* Show mobile-only content */
+  .mobile-only-content {
+    display: block !important;
+  }
+
+  /* Horizontal scroll containers */
+  .horizontal-scroll-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar for mobile */
+  .horizontal-scroll-container::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .horizontal-scroll-container::-webkit-scrollbar-track {
+    background: rgba(242, 224, 116, 0.1);
+    border-radius: 10px;
+  }
+
+  .horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f2e074, #635c31);
+    border-radius: 10px;
+  }
+
+  .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 224, 116, 0.8);
+  }
+
+  /* Mobile section headers */
+  .mobile-section-header {
+    font-size: 20px !important;
+    margin-bottom: 24px !important;
+    text-align: center;
+  }
+
+  /* Mobile bowl cards */
+  .mobile-bowl-card {
+    min-width: 250px;
+    width: 250px;
+    height: 280px;
+    flex-shrink: 0;
+  }
+
+  .mobile-bowl-card b {
+    font-size: 12px !important;
+  }
+
+  /* Mobile promo images */
+  .mobile-promo-image {
+    min-width: 280px;
+    width: 280px;
+    height: 200px;
+    flex-shrink: 0;
+  }
+
+  /* Mobile barkada feast images */
+  .mobile-feast-image {
+    min-width: 280px;
+    width: 280px;
+    height: 220px;
+    flex-shrink: 0;
+  }
+
+  /* ── Menu Categories: horizontal scroll on mobile ── */
+  .tablet-menu-categories {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    padding-bottom: 20px !important;
+    grid-template-columns: none !important;
+  }
+
+  .tablet-menu-item {
+    flex-shrink: 0 !important;
+    min-width: 240px !important;
+    width: 240px !important;
+    height: 300px !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .tablet-menu-item:first-child {
+    margin-left: 4px !important;
+  }
+
+  .tablet-menu-item img {
+    height: 300px !important;
+    object-fit: cover !important;
+  }
+
+  .tablet-menu-categories::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .tablet-menu-categories::-webkit-scrollbar-track {
+    background: rgba(242, 224, 116, 0.1);
+    border-radius: 10px;
+  }
+
+  .tablet-menu-categories::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f2e074, #635c31);
+    border-radius: 10px;
+  }
+
+  .tablet-menu-categories::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 224, 116, 0.8);
+  }
+}
+
+/* ============================================
+   TABLET RESPONSIVE (641px - 768px)
+   ============================================ */
+@media (min-width: 641px) and (max-width: 768px) {
+  /* Tablet-specific adjustments if needed */
+  .header {
+    min-height: 80px;
+  }
+
+  .frame-child {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ============================================
+   IPAD 11 PRO RESPONSIVE (834x1194)
+   Horizontal scrolling for Best Selling Bowls and Promo sections
+   ============================================ */
+@media (min-width: 768px) and (max-width: 900px) {
+  /* Custom scrollbar styling for iPad */
+  .horizontal-scroll-tablet::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .horizontal-scroll-tablet::-webkit-scrollbar-track {
+    background: rgba(242, 224, 116, 0.1);
+    border-radius: 10px;
+  }
+
+  .horizontal-scroll-tablet::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f2e074, #635c31);
+    border-radius: 10px;
+  }
+
+  .horizontal-scroll-tablet::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 224, 116, 0.8);
+  }
+
+  /* Ensure horizontal scrolling behavior */
+  .tablet-scroll-container {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    padding-bottom: 20px !important;
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+    padding-right: 20px !important;
+    margin-left: 0 !important;
+  }
+
+  /* Prevent flex items from shrinking and add proper spacing */
+  .tablet-scroll-item {
+    flex-shrink: 0 !important;
+    min-width: 280px !important;
+  }
+
+  /* Add left margin to first item to prevent cropping */
+  .tablet-scroll-item:first-child {
+    margin-left: 20px !important;
+  }
+
+  /* Specific styling for promo images on tablet */
+  .tablet-scroll-item img {
+    min-width: 300px !important;
+    width: 300px !important;
+  }
+
+  /* Menu Categories Horizontal Scroll for Tablet */
+  .tablet-menu-categories {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 24px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    padding-bottom: 20px !important;
+    grid-template-columns: none !important;
+  }
+
+  .tablet-menu-item {
+    flex-shrink: 0 !important;
+    min-width: 280px !important;
+    width: 280px !important;
+    height: 350px !important;
+  }
+
+  .tablet-menu-item img {
+    height: 350px !important;
+    object-fit: cover !important;
+  }
+
+  .tablet-menu-item:first-child {
+    margin-left: 20px !important;
+  }
+
+  /* Custom scrollbar for menu categories */
+  .tablet-menu-categories::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .tablet-menu-categories::-webkit-scrollbar-track {
+    background: rgba(242, 224, 116, 0.1);
+    border-radius: 10px;
+  }
+
+  .tablet-menu-categories::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f2e074, #635c31);
+    border-radius: 10px;
+  }
+
+  .tablet-menu-categories::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 224, 116, 0.8);
+  }
+
+  /* Adjust section padding for tablet */
+  .tablet-section-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* ============================================
+   DESKTOP (> 768px)
+   ============================================ */
+@media (min-width: 769px) {
+  /* Hide mobile-only content on desktop */
+  .mobile-only-content {
+    display: none !important;
+  }
+
+  /* Ensure hero section is visible on desktop */
+  .hero-section-desktop {
+    display: flex !important;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Prevent horizontal scroll on body */
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for all scroll containers */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality (optional) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
